@@ -3,20 +3,18 @@ const cors = require("cors");
 const fetch = require("node-fetch");
 const app = express();
 
-// ============================================================================
-// ⚙️ CONFIGURACIÓN RÁPIDA (Edita aquí desde GitHub si necesitas cambiar algo)
-// ============================================================================
+// ---------------------------------------
+// Variables
+
 const CONFIG = {
-    // 1. Ruta que expondrá este proxy en Railway
+    
     PROXY_ROUTE: "/api/levapan/productos",
 
-    // 2. Endpoint original de donde se obtienen los datos
     TARGET_API_URL: "https://botai.smartdataautomation.com/api_backend_ai/dinamic-db/report/119/productos_tickets_levapan",
 
-    // 3. Token de autorización
     API_TOKEN: process.env.API_TOKEN || "9b7661d9292aab2c339b95bf251063791c2a62ff",
 };
-// ============================================================================
+// ---------------------------------------
 
 const PORT = process.env.PORT || 3000;
 
