@@ -1,22 +1,22 @@
-// ============================================================================
-// ⚙️ CONFIGURACIÓN RÁPIDA (Edita aquí desde GitHub si necesitas cambiar algo)
-// ============================================================================
+// ---------------------------------------
+// Variables
+
 const CONFIG = {
-    // 1. Títulos de la página
+    // Títulos
     TAB_TITLE: 'Buscador Levapan',
     HEADER_TITLE: 'Búsqueda Productos Levapan',
 
-    // 2. Textos del campo de búsqueda
+    // Textos
     PLACEHOLDER_LOADING: 'Cargando productos...',
     PLACEHOLDER_READY: 'Ingresa SAP, EAN o nombre del producto',
 
-    // 3. Endpoint de Railway (tu rama Proxy desplegada)
+    // Railway
     DATA_URL: 'https://productoslevapan-production.up.railway.app/api/levapan/productos',
 
     // Endpoint directo (referencia):
     // DIRECT_URL: 'https://botai.smartdataautomation.com/api_backend_ai/dinamic-db/report/119/productos_tickets_levapan',
 
-    // 4. Columnas por las que buscará el buscador
+    // Columnas buscador
     SEARCH_KEYS: [
         'SAP',
         'Codigo EAN/UPC',
@@ -27,13 +27,12 @@ const CONFIG = {
         'Nombre SubGrupo'
     ],
 };
-// ============================================================================
+// ---------------------------------------
 
 let debounceTimer;
 let fuse = null;
 let allData = [];
 
-// Aplicar títulos configurados al cargar
 document.title = CONFIG.TAB_TITLE;
 const titleEl = document.getElementById('searchTitle');
 if (titleEl) titleEl.textContent = CONFIG.HEADER_TITLE;
