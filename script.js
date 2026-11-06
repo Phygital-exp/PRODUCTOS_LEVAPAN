@@ -112,9 +112,7 @@ function renderResults(results) {
                         <li><strong>SAP:</strong> ${result.SAP ?? 'N/A'}
                             <i class="material-icons copy-icon" role="button" tabindex="0" aria-label="Copiar SAP" onclick="copyToClipboard('${result.SAP}', 'SAP')">content_copy</i>
                         </li>
-                        <li><strong>EAN / UPC:</strong> ${ean}
-                            <i class="material-icons copy-icon" role="button" tabindex="0" aria-label="Copiar EAN" onclick="copyToClipboard('${ean}', 'EAN')">content_copy</i>
-                        </li>
+                        <li><strong>EAN / UPC:</strong> ${ean}</li>
                         <li><strong>Línea:</strong> ${linea || 'N/A'}</li>
                         <li><strong>Grupo / Subgrupo:</strong> ${grupo || 'N/A'} - ${result['Nombre SubGrupo'] || 'N/A'}</li>
                     </ul>
